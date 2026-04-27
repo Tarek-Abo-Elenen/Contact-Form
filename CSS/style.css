@@ -1,0 +1,70 @@
+:root {
+  --Green-200-lighter: hsl(148, 38%, 91%);
+  --Green-600-medium: hsl(169, 82%, 27%);
+  --Red: hsl(0, 66%, 54%);
+  --White: hsl(0, 0%, 100%);
+  --Grey-500-medium: hsl(186, 15%, 59%);
+  --Grey-900-darker: hsl(187, 24%, 22%);
+}
+body {
+  font-family: "Karla", sans-serif;
+  background-color: var(--Green-200-lighter);
+}
+form {
+  min-height: 100vh;
+}
+h3 {
+  color: var(--Grey-900-darker);
+}
+label {
+  font-size: 15px;
+}
+input,
+textarea {
+  padding: 10px 12px;
+  border: 2px solid var(--Grey-500-medium);
+  border-radius: 5px;
+  transition: 0.25s;
+}
+input:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--Green-600-medium);
+  box-shadow: 0 0 0 2px rgba(22, 134, 92, 0.2);
+}
+input:hover,
+textarea:hover {
+  border-color: var(--Green-600-medium);
+}
+.radio {
+  border: 2px solid var(--Grey-500-medium);
+  cursor: pointer;
+  transition: all 0.25s ease;
+}
+input[type='radio'] {
+  width: 16px;
+  height: 16px;
+  accent-color: var(--Green-600-medium);
+}
+.radio:has(input:checked) {
+  border-color: var(--Green-600-medium);
+  background-color: var(--Green-200-lighter);
+  box-shadow: 0 0 0 2px rgba(22, 134, 92, 0.1);
+}
+textarea {
+  min-height: 120px;
+  resize: none;
+}
+input[type='checkbox'] {
+  accent-color: var(--Green-600-medium);
+  width: 16px;
+  height: 16px;
+}
+button {
+  background-color: var(--Green-600-medium);
+  transition: background-color 0.3s;
+  cursor: pointer;
+}
+button:hover {
+  background-color: var(--Grey-900-darker);
+}

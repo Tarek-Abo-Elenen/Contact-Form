@@ -1,52 +1,62 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
-
-  <link rel="icon" type="image/png" sizes="32x32" href="./assets/images/favicon-32x32.png">
-  
-  <title>Frontend Mentor | Contact form</title>
-
-  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
-  <style>
-    .attribution { font-size: 0.6875rem; text-align: center; }
-    .attribution a { color: hsl(228, 45%, 44%); }
-  </style>
-</head>
-<body>
-
-  Contact Us
-
-  First Name
-  This field is required
-
-  Last Name
-  This field is required
-
-  Email Address
-  Please enter a valid email address
-  This field is required
-
-  Query Type
-  General Enquiry
-  Support Request
-  Please select a query type
-
-  Message
-  This field is required
-
-  I consent to being contacted by the team
-  To submit this form, please consent to being contacted
-
-  Submit
-
-  Message Sent!
-  Thanks for completing the form. We'll be in touch soon!
-  
-  <footer class="attribution">
-    Challenge by <a href="https://www.frontendmentor.io?ref=challenge">Frontend Mentor</a>. 
-    Coded by <a href="#">Your Name Here</a>.
-  </footer>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/style.css">
+    <title>Contact Form</title>
+  </head>
+  <body>
+    <form class="d-flex justify-content-center align-items-center min-vh-100">
+      <div class="container col-md-6 col-11 bg-white py-4 px-4 rounded-4">
+      <h3 class="mb-4">Contact Us</h3>
+        <div class="row g-3">
+          <div class="col-lg-6 d-flex flex-column">
+            <label for="fname">First Name</label>
+            <input required type="text" id="fname" name="fname">
+          </div>
+          <div class="col-lg-6 d-flex flex-column">
+            <label for="lname">Last Name</label>
+            <input required type="text" id="lname" name="lname">
+          </div>
+          <div class="col-12 d-flex flex-column">
+            <label for="email">Email Address</label>
+            <input required type="email" id="email" name="email">
+          </div>
+          <div class="col-12">
+            <label class="mb-2">Query Type *</label>
+            <div class="d-flex flex-column flex-xl-row gap-3">
+              <label for="general" class="radio w-100 w-xl-50 d-flex align-items-center gap-2 p-2 rounded-3">
+                <input required type="radio" name="query" id="general">
+                General Enquiry
+              </label>
+              <label for="support" class="radio w-100 w-xl-50 d-flex align-items-center gap-2 p-2 rounded-3">
+                <input required type="radio" name="query" id="support">
+                Support Request
+              </label>
+            </div>
+          </div>
+          <div class="col-12 d-flex flex-column">
+            <label for="message">Message</label>
+            <textarea required name="message" id="message"></textarea>
+          </div>
+          <div class="col-12">
+            <label for="check" class="d-flex gap-2 align-items-center">
+              <input required type="checkbox" id="check">
+              I consent to being contacted by the team
+            </label>
+          </div>
+          <div class="col-12">
+            <button type="submit" class="w-100 p-2 rounded-2 text-white fw-bold border-0">
+              Submit
+            </button>
+          </div>
+        </div>
+      </div>
+    </form>
+  </body>
 </html>
