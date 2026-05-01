@@ -19,6 +19,9 @@ h3 {
 label {
   font-size: 15px;
 }
+label span{
+  color: var(--Green-600-medium);
+}
 input,
 textarea {
   padding: 10px 12px;
@@ -67,4 +70,26 @@ button {
 }
 button:hover {
   background-color: var(--Grey-900-darker);
+}
+.errormessage{
+  color: var(--Red);
+  margin-top: 10px;
+  display: none;
+}
+.checkboxmessage{
+  cursor: pointer;
+}
+.custom-alert{
+  background-color: var(--Grey-900-darker);
+  display: none;
+  left: 50%;
+  transform: translateX(-50%);
+  top: 20px;
+  z-index: 999;
+}
+.custom-alert p{
+  font-size: 12px;
+}
+.input-error {
+  border-color: var(--Red);
 }

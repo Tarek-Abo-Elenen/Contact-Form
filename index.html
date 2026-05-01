@@ -7,48 +7,59 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Karla:wght@200..800&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="CSS/bootstrap.min.css">
+    <link rel="stylesheet" href="CSS/all.min.css">
     <link rel="stylesheet" href="CSS/style.css">
     <title>Contact Form</title>
   </head>
   <body>
-    <form class="d-flex justify-content-center align-items-center min-vh-100">
+    <div class="custom-alert position-fixed text-white p-3 rounded-3">
+      <h6><i class="fa-regular fa-circle-check"></i> Message sent!</h6>
+      <p>Thanks for completing the form,We will be in touch soon!</p>
+    </div>
+    <form class="d-flex justify-content-center align-items-center ">
       <div class="container col-md-6 col-11 bg-white py-4 px-4 rounded-4">
       <h3 class="mb-4">Contact Us</h3>
         <div class="row g-3">
           <div class="col-lg-6 d-flex flex-column">
-            <label for="fname">First Name</label>
-            <input required type="text" id="fname" name="fname">
+            <label for="fname">First Name  <span>*</span></label>
+            <input  type="text" id="fname" name="fname">
+            <p class="errormessage fname">This field is required</p>
           </div>
           <div class="col-lg-6 d-flex flex-column">
-            <label for="lname">Last Name</label>
-            <input required type="text" id="lname" name="lname">
+            <label for="lname">Last Name  <span>*</span></label>
+            <input  type="text" id="lname" name="lname">
+            <p class="errormessage lname">This field is required</p>
           </div>
           <div class="col-12 d-flex flex-column">
-            <label for="email">Email Address</label>
-            <input required type="email" id="email" name="email">
+            <label for="email">Email Address <span>*</span></label>
+            <input type="email" id="email" name="email">
+            <p class="errormessage email">Please enter a vaild email address</p>
           </div>
           <div class="col-12">
-            <label class="mb-2">Query Type *</label>
+            <label class="mb-2">Query Type <span>*</span></label>
             <div class="d-flex flex-column flex-xl-row gap-3">
               <label for="general" class="radio w-100 w-xl-50 d-flex align-items-center gap-2 p-2 rounded-3">
-                <input required type="radio" name="query" id="general">
+                <input  type="radio" name="query" id="general">
                 General Enquiry
               </label>
               <label for="support" class="radio w-100 w-xl-50 d-flex align-items-center gap-2 p-2 rounded-3">
-                <input required type="radio" name="query" id="support">
+                <input  type="radio" name="query" id="support">
                 Support Request
               </label>
             </div>
+            <p class="errormessage radiomessage ">Please select a query type</p>
           </div>
           <div class="col-12 d-flex flex-column">
-            <label for="message">Message</label>
-            <textarea required name="message" id="message"></textarea>
+            <label for="message">Message <span>*</span></label>
+            <textarea  name="message" id="message"></textarea>
+            <p class="errormessage textarea">This field is required</p>
           </div>
           <div class="col-12">
-            <label for="check" class="d-flex gap-2 align-items-center">
-              <input required type="checkbox" id="check">
+            <label  for="check" class="checkboxmessage d-flex  gap-2 align-items-center">
+              <input  type="checkbox" id="check">
               I consent to being contacted by the team
             </label>
+            <p class="errormessage checkbox">To submit this form,please consent to being contacted</p>
           </div>
           <div class="col-12">
             <button type="submit" class="w-100 p-2 rounded-2 text-white fw-bold border-0">
@@ -58,5 +69,8 @@
         </div>
       </div>
     </form>
+    <script src="js/all.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>
